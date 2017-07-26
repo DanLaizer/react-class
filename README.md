@@ -8,5 +8,8 @@ React Project Template with automated build.
 2. Install git
 
 ## Usage
+To build:
+
+1. npm run build
 
 ## Credits

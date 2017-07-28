@@ -1,18 +1,9 @@
-export let greet = (name) => {
-    if(name === undefined || name === ''){
-        return 'Hello, Friend!';
-    }
-    return 'Hello, ' + name;
-};
+import React from 'react';
 
-export let greetTimeOfDay = (time) => {
-    if(time < 12){
-        return 'Good morning!';
+class SayHello extends React.Component {
+    render() {
+        return (<h1>Hello, {this.props.name}!</h1>);
     }
-    else if(time >= 12 && time < 20){
-        return 'Good afternoon!';
-    }
-    else if(time >= 20){
-        return 'Good evening!';
-    }
-};
+}
+
+export default SayHello;

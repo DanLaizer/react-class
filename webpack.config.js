@@ -12,10 +12,14 @@ module.exports = {
     module : {
         loaders: [ {
             test : /.js$/,
-            loader : 'babel-loader',
-            query: {
-                presets: ['es2015']
-            }
+            loader : ['babel-loader?presets[]=es2015,presets[]=react']
+        },
+        {
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            loaders: [
+                'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+                'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            ]
         }
         ]
     },

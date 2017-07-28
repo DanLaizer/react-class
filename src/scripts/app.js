@@ -1,6 +1,8 @@
-import * as sayHello from './sayHello.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+// import SayHello from './SayHello.js';
+import PollContainer from '../containers/PollContainer';
 
-window.addEventListener('load', () => {
-    document.getElementById('welcome-message').innerHTML =
-      sayHello.greet('Dan');
-});
+ReactDOM.render(
+    <PollContainer />,
+    document.getElementById('app'));

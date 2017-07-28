@@ -17,7 +17,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'spec/**/*Spec.js'
+      'spec/tests.webpack.js'
     ],
 
 
@@ -41,7 +41,7 @@ module.exports = function(config) {
           test : /.js$/,
           loader : 'babel-loader',
           query: {
-            presets: ['es2015']
+            presets: ['es2015', 'react']
           }
         }
         ]

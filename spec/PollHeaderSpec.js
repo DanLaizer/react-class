@@ -1,18 +1,20 @@
 import React from 'react';
 import TestUtils from 'react-dom/test-utils';
 import PollHeader from '../src/components/PollHeader.js';
+import TestWrapper from '../src/components/TestWrapper';
 
 describe('Poll Header', () => {
     var component;
     beforeEach(() => {
         component = TestUtils.renderIntoDocument(
-            <PollHeader text="Welcome to the Poll!" />
+            <TestWrapper>
+                <PollHeader text="Welcome to the Poll!" />
+            </TestWrapper>
         );
     });
 
     it('renders without problems', () =>  {
-        var pollHeader = TestUtils.renderIntoDocument(<PollHeader />);
-        expect (pollHeader).toEqual(jasmine.anything());
+        expect (component).toEqual(jasmine.anything());
     });
 
     it('prints a message', () => {

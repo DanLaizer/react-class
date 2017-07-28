@@ -1,7 +1,9 @@
 import React from 'react';
 import RadioButton from './RadioButton';
+import PropTypes from 'prop-types';
 
 class RadioButtonGroup extends React.Component{
+
     render(){
         const choiceItems = this.props.choices.map(choice => {
             const {value, label} = choice;
@@ -9,7 +11,7 @@ class RadioButtonGroup extends React.Component{
 
             return (
                 <RadioButton
-                    Key={`radio-button-${value}`}
+                    key={`radio-button-${value}`}
                     label={label}
                     name={this.props.name}
                     value={value}
@@ -25,5 +27,12 @@ class RadioButtonGroup extends React.Component{
         );
     }
 }
+
+RadioButtonGroup.propTypes = {
+    name: PropTypes.string,
+    checkedValue: PropTypes.string,
+    choices: PropTypes.array,
+    onChange: PropTypes.func
+};
 
 export default RadioButtonGroup;

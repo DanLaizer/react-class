@@ -6,7 +6,7 @@ describe('Radio Button', () => {
     var component;
     beforeEach(() => {
         component = TestUtils.renderIntoDocument(
-            <RadioButton text="Answer" />
+            <RadioButton label="Answer" />
         );
     });
 
@@ -16,7 +16,7 @@ describe('Radio Button', () => {
     });
 
     it('prints an answer', () => {
-        var actual = TestUtils.findRenderedDOMComponentWithTag(component, 'div')
+        var actual = TestUtils.findRenderedDOMComponentWithTag(component, 'span')
             .textContent;
         var expected = 'Answer';
         expect(actual).toEqual(expected);
